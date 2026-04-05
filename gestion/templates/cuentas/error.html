@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-warning text-center" role="alert" style="background-color: #fff3cd; color: #856404;">
+        {{ mensaje }}
+    </div>
+    <div class="text-center mt-3">
+        <a href="{% url 'crear_transaccion' %}" class="btn btn-custom">Volver a Transacción</a>
+    </div>
+</div>
+{% endblock %}

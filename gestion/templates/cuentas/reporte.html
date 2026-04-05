@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">📊 Reporte de mis Transacciones</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cuenta</th>
+            <th>Tipo</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for t in transacciones %}
+    <tr>
+        <td>{{ t.cuenta.id }}</td>
+        <td>{{ t.tipo }}</td>
+        <td>${{ t.monto }}</td>
+        <td>{{ t.fecha }}</td>
+        <td>
+            {% if t.estado == 'exito' %}
+                <span class="badge bg-success">✔ Transaccion realizada con éxito</span>
+            {% elif t.estado == 'fallo' %}
+                <span class="badge bg-danger">✖ Transaccion fallida por saldo insuficiente </span>
+            {% else %}
+                <span class="badge bg-secondary">Desconocido</span>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}

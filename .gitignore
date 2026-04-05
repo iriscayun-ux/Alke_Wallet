@@ -1,0 +1,30 @@
+# Entorno virtual
+env/
+venv/
+ENV/
+*.env
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local
+db.sqlite3
+
+# Archivos de migraciones (opcional, si quieres subirlas quita estas líneas)
+# **/migrations/*.py
+# **/migrations/*.pyc
+
+# Archivos de logs
+*.log
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

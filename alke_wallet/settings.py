@@ -93,25 +93,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# 🔹 Idioma y zona horaria
+# Idioma y zona horaria
 LANGUAGE_CODE = 'es-cl'
 TIME_ZONE = 'America/Santiago'
 USE_I18N = True
 USE_TZ = True
 
-# 🔹 Archivos estáticos
+# Archivos estáticos
 STATIC_URL = 'static/'
 
-# ✅ OPCIÓN SEGURA (sin errores)
-# Puedes dejar comentado si te daba problema
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'gestion' / 'static',
-# ]
 
-# 🔹 Login / Logout
+# Login / Logout
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
 LOGIN_URL = 'login'
 
-# 🔹 Default primary key
+#  Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
